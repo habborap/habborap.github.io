@@ -3,50 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HabboRap.de - Fan Webradio für das deutsche Habbo Hotel">
+    <meta property="og:title" content="HabboRap.de">
+    <meta property="og:description" content="HabboRap.de - Fan Webradio für das deutsche Habbo Hotel">
     <title>HabboRap.de</title>
-    <style>
-        :root {
-            --bg-color-light: #ffffff;
-            --text-color-light: #000000;
-            --bg-color-dark: #121212;
-            --text-color-dark: #ffffff;
-        }
-
-        html {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        body {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-        }
-
-        @media (prefers-color-scheme: light) {
-            html {
-                background-color: var(--bg-color-light);
-                color: var(--text-color-light);
-            }
-        }
-
-        @media (prefers-color-scheme: dark) {
-            html {
-                background-color: var(--bg-color-dark);
-                color: var(--text-color-dark);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <div>Coming soon</div>
+    <div class="container">
+        <header>
+            <img src="assets/images/logo.png" alt="Logo" class="logo">
+        </header>
+        <main>
+            <div class="radio-area">
+                <div class="box current-stats">
+                    <h2>Aktuelle Wiedergabe</h2>
+                    <p class="station-info"><b id="current-playlist">Rotation</b> mit <b id="current-listeners">0</b> <span id="listener-text">Hörern</span>.</p>
+                    <div class="current-cover-container">
+                        <img id="current-cover" src="https://via.placeholder.com/80?text=Cover" alt="Current Song Cover" class="current-song-cover">
+                        <div class="current-song-info">
+                            <p id="current-artist" class="artist"></p>
+                            <p id="current-title" class="song-title"></p>
+                            <p id="current-release-year" class="release-year"></p>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <span class="timestamp start-time" id="current-time">00:00</span>
+                        <div id="progress" class="progress"></div>
+                        <span class="timestamp end-time" id="end-time">00:00</span>
+                    </div>
+                    <button class="button listen-button" id="tune-in-button">HabboRap Radio einschalten</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>

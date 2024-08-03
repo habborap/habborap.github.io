@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #000000 10%, #2B2B2B 50%);
+    font-family: Verdana, sans-serif;
+    color: white;
+    position: relative;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(
+        transparent 90deg,
+        transparent 90deg 180deg,
+        #1F1F1F 180deg 270deg,
+        transparent 270deg
+    );
+    background-size: 4px 4px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    margin-top: 50px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.radio-area {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.box {
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom, #0C0C0C, #272727);
+    flex: 1;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.box h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #EAEAEA;
+}
+
+.current-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.current-cover-container {
+    display: flex;
+    align-items: center;
+}
+
+.current-song-cover {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 20px;
+}
+
+.current-song-info {
+    flex: 1;
+    font-size: 14px;
+}
+
+.current-song-info p {
+    margin: 5px 0;
+}
+
+.current-song-info .artist {
+    font-weight: bold;
+}
+
+.current-song-info .release-year {
+    font-size: 12px;
+    color: gray;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    height: 15px;
+    background: #444;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-bar .progress {
+    height: 100%;
+    background: #356087;
+    width: 0%;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: white;
+    position: absolute;
+}
+
+.timestamp.start-time {
+    left: 0;
+    padding-left: 5px;
+}
+
+.timestamp.end-time {
+    right: 0;
+    padding-right: 5px;
+}
+
+.button {
+    padding: 10px 15px;
+    background-color: #333;
+    border: none;
+    color: white;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #444;
+}
+
+.station-info {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
+    color: #EAEAEA;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .radio-area {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .current-song-cover {
+        width: 60px;
+        height: 60px;
+    }
+}
