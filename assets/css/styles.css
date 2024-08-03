@@ -5,7 +5,6 @@
 }
 
 body {
-    height: 100vh;
     margin: 0;
     background: linear-gradient(to bottom, #000000 10%, #2B2B2B 50%);
     font-family: Verdana, sans-serif;
